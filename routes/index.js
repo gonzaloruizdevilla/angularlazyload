@@ -10,8 +10,8 @@ router.get('/', function(req, res) {
 
 [
     "fail-late-register",
-    "lazy-register",
-    "lazy-register-2",
+    "late-register",
+    "late-register-2",
     "lazy-load",
     "require"
 ].forEach(function (path){
