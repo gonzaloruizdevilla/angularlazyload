@@ -2,6 +2,19 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/bower_components/angular/angular.js")
   body
-    block content
+    .row
+        .col-md-3
+            h2 Menu
+            ul
+                li: a(href="/") Intro
+                li: a(href="/fail-late-register") Lazy register (fail)
+                li: a(href="/lazy-register") Lazy register (win)
+                li: a(href="/lazy-register-2") Lazy register refined
+                li: a(href="/lazy-load") Lazy loading
+                li: a(href="/require") Using require
+        .col-md-6
+            block content

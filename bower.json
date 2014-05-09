@@ -6,6 +6,9 @@
     "Gonzalo Ruiz de Villa <gonzaloruizdevilla@gmail.com>"
   ],
   "dependencies": {
-    "angular": "~1.2.16"
+    "angular": "~1.2.16",
+    "highlightjs": "~8.0.0",
+    "angular-highlightjs": "~0.2.0",
+    "bootstrap": "~3.1.1"
   }
 }
