@@ -1,0 +1,11 @@
+{
+  "name": "lazyregister",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gonzaloruizdevilla/lazyregister",
+  "authors": [
+    "Gonzalo Ruiz de Villa <gonzaloruizdevilla@gmail.com>"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  }
+}
