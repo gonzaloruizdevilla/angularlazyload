@@ -1,4 +1,4 @@
-var module = angular.module('failLateRegister', []);
+var module = angular.module('winLateRegister2', []);
 
 function registerService(number){
     module.factory('Service' + number + 'Srv', function x(){
@@ -9,6 +9,7 @@ function registerService(number){
         };
     });
 }
+
 
 registerService(1);
 
@@ -30,4 +31,12 @@ module.controller('DefaultCtrl', function ($scope, $injector) {
             $scope.resultadoServicio2 = ex.toString();
         }
     };
+});
+
+module.config(function ($controllerProvider, $compileProvider, $filterProvider, $provide) {
+    module.controller = $controllerProvider.register;
+    module.directive = $compileProvider.directive;
+    module.filter = $filterProvider.register;
+    module.factory = $provide.factory;
+    module.service = $provide.service;
 });

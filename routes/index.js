@@ -8,7 +8,13 @@ router.get('/', function(req, res) {
 
 
 
-["fail-late-register","lazy-register","lazy-load","require"].forEach(function (path){
+[
+    "fail-late-register",
+    "lazy-register",
+    "lazy-register-2",
+    "lazy-load",
+    "require"
+].forEach(function (path){
     router.get('/' + path, function(req, res) {
       res.render(path);
     });
