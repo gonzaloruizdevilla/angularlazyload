@@ -4,7 +4,8 @@ html
     title= title
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/bower_components/angular/angular.js")
+    block scripts
+      script(src="/bower_components/angular/angular.js")
   body
     .row
         .col-md-3

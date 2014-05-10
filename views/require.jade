@@ -1,4 +1,13 @@
 extends layout
-
+block scripts
 block content
-    h1 Require
+    #lazyLoad(ng-controller="MainCtrl")
+        .bs-callout.bs-callout-info
+          h2 Lazy load with require
+          p Lazy load based on require.
+        p.form-group
+          label Route:
+          select.form-control(ng-options="url for url in urls", ng-model="location")
+        ng-view
+        
+    script(data-main="javascripts/lazy-load-require.js", src="bower_components/requirejs/require.js")
