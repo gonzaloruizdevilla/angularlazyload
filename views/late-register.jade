@@ -2,9 +2,10 @@ extends layout
 
 block content
   #winLateRegister(ng-app="winLateRegister", ng-controller="DefaultCtrl")
-    h1 Late register (win)
-    p During the configuraction phase, we can access the services used for registering artigacts.
-    p We can expose this services for later use.
+    .bs-callout.bs-callout-info
+      h2 Late register (win)
+      p During the configuraction phase, we can access the services used for registering resources.
+      p We can store them and expose through an object.
     table.table
       tr
         td: button(ng-click="useService1()") Use Service1:

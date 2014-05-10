@@ -2,8 +2,14 @@ extends layout
 
 block content
     #lazyLoad(ng-app="lazyLoad", ng-controller="MainCtrl")
-        h1 Lazy load
-        p: select(ng-options="url for url in urls", ng-model="location")
+        .bs-callout.bs-callout-info
+          h2 Lazy load
+          p Select a route, and the app will navigate to it.
+          p Before rendering the route's view, it will load all it's dependencies.
+          p The route config has promise that is resolved when all the dependencies are loaded.
+        p.form-group
+          label Route:
+          select.form-control(ng-options="url for url in urls", ng-model="location")
         ng-view
     script(src="/bower_components/script.js/dist/script.js")
     script(src="/bower_components/angular-route/angular-route.js")
