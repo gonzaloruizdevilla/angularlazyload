@@ -6,7 +6,9 @@ router.get('/', function(req, res) {
   res.render('index');
 });
 
-
+router.get('/partial/:idpartial', function(req, res) {
+  res.render('partials/' + req.params.idpartial);
+});
 
 [
     "fail-late-register",
