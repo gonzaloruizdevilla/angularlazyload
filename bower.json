@@ -11,6 +11,7 @@
     "angular-highlightjs": "~0.2.0",
     "bootstrap": "~3.1.1",
     "requirejs": "~2.1.11",
-    "script.js": "~2.5.3"
+    "script.js": "~2.5.3",
+    "angular-route": "~1.2.16"
   }
 }
