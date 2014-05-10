@@ -9,6 +9,8 @@
     "angular": "~1.2.16",
     "highlightjs": "~8.0.0",
     "angular-highlightjs": "~0.2.0",
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "requirejs": "~2.1.11",
+    "script.js": "~2.5.3"
   }
 }
