@@ -6,9 +6,9 @@ To run the examples you must:
 
 * `npm install`
 * `bower install`
-* `npm run`
+* `npm start`
 
 You can find the slides of the meetup here:
 
 * https://slides.com/gruizdevilla/late-registering-and-lazy-load-in-angularjs-en (English version)
-* https://slides.com/gruizdevilla/late-registering-and-lazy-load-in-angularjs (Spanish version)
+* https://slides.com/gruizdevilla/late-registering-and-lazy-load-in-angularjs-es (Spanish version)
