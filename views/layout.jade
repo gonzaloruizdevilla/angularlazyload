@@ -4,18 +4,22 @@ html
     title= title
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bower_components/highlightjs/styles/default.css')
+
+    script(src='/bower_components/highlightjs/highlight.pack.js')
     block scripts
-      script(src="/bower_components/angular/angular.js")
+      script(src='/bower_components/angular/angular.js')
+      script(src='/bower_components/angular-highlightjs/angular-highlightjs.js')
   body
     .row
         .col-md-3
             h2 Menu
             ul
-                li: a(href="/") Intro
-                li: a(href="/fail-late-register") Late register (fail)
-                li: a(href="/late-register") Late register (win)
-                li: a(href="/late-register-2") Late register refined
-                li: a(href="/lazy-load") Lazy loading
-                li: a(href="/require") Using require
+                li: a(href='/') Intro
+                li: a(href='/fail-late-register') Late register (fail)
+                li: a(href='/late-register') Late register (win)
+                li: a(href='/late-register-2') Late register refined
+                li: a(href='/lazy-load') Lazy loading
+                li: a(href='/require') Using require
         .col-md-6
             block content

@@ -1,22 +1,6 @@
-requirejs.config({
-    paths: {
-      'domReady': '../../bower_components/requirejs-domready/domReady',
-      'angular': '../../bower_components/angular/angular',
-      'ngRoute': '../../bower_components/angular-route/angular-route'
-    },
-    shim: {
-      'angular': {
-        exports: 'angular'
-       },
-      'ngRoute': {
-        deps: ['angular'],
-        exports: 'ngRoute'
-      }
-    }
-});
+define(['domReady', 'angular', 'ngRoute', 'hljs'], function() {
 
-define(['domReady', 'angular', 'ngRoute'], function() {
-  var module = angular.module('requireLoad', ['ngRoute']);
+  var module = angular.module('requireLoad', ['ngRoute', 'hljs']);
 
   var routes = {
     'url11': ['require/url11-controller'],
@@ -53,7 +37,12 @@ define(['domReady', 'angular', 'ngRoute'], function() {
     });
   });
 
-  module.config(function ($controllerProvider, $compileProvider, $filterProvider, $provide) {
+  module.config(function (
+    $controllerProvider,
+    $compileProvider,
+    $filterProvider,
+    $provide
+  ) {
     module.controller = $controllerProvider.register;
     module.directive = $compileProvider.directive;
     module.filter = $filterProvider.register;

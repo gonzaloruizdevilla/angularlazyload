@@ -1,17 +1,38 @@
 extends layout
 
 block content
-    #lazyLoad(ng-app="lazyLoad", ng-controller="MainCtrl")
-        .bs-callout.bs-callout-info
-          h2 Lazy load
-          p Select a route, and the app will navigate to it.
-          p Before rendering the route's view, it will load all it's dependencies.
-          p The route config has promise that is resolved when all the dependencies are loaded.
-        p.form-group
-          label Route:
-          select.form-control(ng-options="url for url in urls", ng-model="location")
-        ng-view
+  #lazyLoad(ng-app="lazyLoad", ng-controller="MainCtrl")
+    .bs-callout.bs-callout-info
+      h2 Lazy load
+      p Select a route, and the app will navigate to it.
+      p Before rendering the route's view, it will load all it's dependencies.
+      p The route config has promise that is resolved when all the dependencies are loaded.
+    p.form-group
+      label Route:
+      select.form-control(ng-options="url for url in urls", ng-model="location")
+    ng-view
     script(src="/bower_components/script.js/dist/script.js")
     script(src="/bower_components/angular-route/angular-route.js")
     script(src="/javascripts/lazy-load.js")
     script(src="/javascripts/lazy/main-controller.js")
+
+
+    hr
+    h4 Template
+    div(hljs, include="'/jade/lazy-load.jade'", language="haml")
+    h4 Script (javascripts/lazy-load.js)
+    div(hljs, include="'/javascripts/lazy-load.js'", language="javascript")
+    h4 Script (javascripts/lazy/main-controller.js)
+    div(hljs, include="'/javascripts/lazy/main-controller.js'", language="javascript")
+    h4 Script (javascripts/lazy/url11-controller.js)
+    div(hljs, include="'/javascripts/lazy/url11-controller.js'", language="javascript")
+    h4 Script (javascripts/lazy/url12-controller.js)
+    div(hljs, include="'/javascripts/lazy/url12-controller.js'", language="javascript")
+    h4 Script (javascripts/lazy/service1.js)
+    div(hljs, include="'/javascripts/lazy/service1.js'", language="javascript")
+    h4 Script (javascripts/lazy/url21-controller.js)
+    div(hljs, include="'/javascripts/lazy/url21-controller.js'", language="javascript")
+    h4 Script (javascripts/lazy/url22-controller.js)
+    div(hljs, include="'/javascripts/lazy/url22-controller.js'", language="javascript")
+    h4 Script (javascripts/lazy/service2.js)
+    div(hljs, include="'/javascripts/lazy/service2.js'", language="javascript")

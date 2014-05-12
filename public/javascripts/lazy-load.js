@@ -1,4 +1,4 @@
-var module = angular.module('lazyLoad', ['ngRoute']);
+var module = angular.module('lazyLoad', ['ngRoute', 'hljs']);
 
 var routes = {
   'url11': [
@@ -48,7 +48,12 @@ module.config(function ($routeProvider) {
   });
 });
 
-module.config(function ($controllerProvider, $compileProvider, $filterProvider, $provide) {
+module.config(function (
+  $controllerProvider,
+  $compileProvider,
+  $filterProvider,
+  $provide
+){
   module.controller = $controllerProvider.register;
   module.directive = $compileProvider.directive;
   module.filter = $filterProvider.register;

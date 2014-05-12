@@ -17,3 +17,8 @@ block content
         td: button(ng-click="useService2()") Use Service2:
         td: span {{resultadoServicio2}}
     script(src="/javascripts/win-late-register.js")
+    hr
+    h4 Template
+    div(hljs, include="'/jade/late-register.jade'", language="haml")
+    h4 Script
+    div(hljs, include="'/javascripts/win-late-register.js'", language="javascript")
